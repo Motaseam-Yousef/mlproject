@@ -160,4 +160,4 @@ cython_debug/
 #.idea/
 
 # catboos
-catboost_info/
+notebook/catboost_info/
