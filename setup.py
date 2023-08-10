@@ -25,5 +25,5 @@ setup(
         author = 'Motaseam',
         author_email = 'motaseam.saher.51@gmail.com',
         packages = find_packages(),
-        install_requirements = ['pandas','numpy','seaborn']
+        install_requirements = get_requirements('requirements.txt')
     )
