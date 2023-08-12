@@ -97,3 +97,14 @@ class DataTransformation:
             return (train_arr, test_arr, self.data_transformation_config.preprocessor_obj_file_path)
         except Exception as e:
             raise CustomException(str(e))
+
+if __name__ == "__main__":
+    train_path = r"C:\Users\Motasem-PC\Desktop\mlproject\artifacts\test.csv"
+    test_path = r"C:\Users\Motasem-PC\Desktop\mlproject\artifacts\train.csv"
+
+    transformer = DataTransformation()
+    train_arr, test_arr, preprocessor_path = transformer.initiate_data_transformation(train_path, test_path)
+
+    logging.info(f"Processed training data shape: {train_arr.shape}")
+    logging.info(f"Processed testing data shape: {test_arr.shape}")
+    logging.info(f"Saved preprocessor object to: {preprocessor_path}")
