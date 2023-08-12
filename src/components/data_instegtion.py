@@ -1,3 +1,5 @@
+# data instegtion : read data from data source then split for Train, Test
+
 import os
 import sys
 from src.exception import CustomException
