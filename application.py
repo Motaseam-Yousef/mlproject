@@ -44,3 +44,6 @@ def predict_datapoint():
 
 if __name__ == "__main__":
     application.run(host="0.0.0.0")
+
+# Run on docker
+# docker run -p 5000:5000 mlproject_image
