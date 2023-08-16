@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 import numpy as np
 import pandas as pd
+import os
 
 from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import CustomData, PredictPipeline
@@ -43,7 +44,9 @@ def predict_datapoint():
     
 
 if __name__ == "__main__":
-    application.run(host="0.0.0.0")
+    port = int(os.environ.get("PORT", 8080))
+    application.run(host="0.0.0.0", port=port)
+
 
 # Run on docker
 # docker run -p 5000:5000 mlproject_image
